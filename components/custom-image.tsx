@@ -22,12 +22,12 @@ export default function CustomImage({
         alt={alt}
         width={width}
         height={height}
-        className={`${!loaded ? "opacity-0" : "opacity-100"}}`}
+        className={`${!loaded ? "opacity-0" : "opacity-100"}`}
         onLoadingComplete={() => setLoaded(true)}
         unoptimized={true}
       />
       {!loaded && (
-        <Skeleton className="w-[1000px] h-[300px]" />
+        <Skeleton className="absolute w-[1000px] h-[1000px] top-0 bottom-0 left-0 right-0" />
       )}
     </div>
   );
