@@ -14,6 +14,7 @@ export default function CustomImage({
   [key: string]: any;
 }) {
   const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="relative">
       <Image
@@ -23,6 +24,7 @@ export default function CustomImage({
         height={height}
         className={`${!loaded ? "opacity-0" : "opacity-100"}}`}
         onLoadingComplete={() => setLoaded(true)}
+        unoptimized={true}
       />
       {!loaded && (
         <Skeleton className="w-[1000px] h-[300px]" />
