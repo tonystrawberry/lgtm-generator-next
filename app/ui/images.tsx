@@ -47,7 +47,7 @@ export default function Images() {
     }
     setLoading(true);
 
-    let url = `https://9y0yvdvqnc.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/images`; // The API endpoint to fetch images from.
+    let url = process.env.NEXT_PUBLIC_SERVER_API_URL as string; // The API endpoint to fetch images from.
 
     // If there is a cursor, add it to the URL.
     if (cursor) {
@@ -134,7 +134,7 @@ export default function Images() {
         images.map((image: any, index: any) => (
           <div
             key={index}
-            className="rounded overflow-hidden relative cursor-pointer"
+            className="rounded overflow-hidden relative cursor-pointer max-h-[315px]"
             onClick={() => copyToClipboard(image.image_url)}
           >
             <div className="absolute inset-0 bg-white opacity-0 hover:opacity-50 transition-opacity duration-300 z-10">
@@ -159,7 +159,7 @@ export default function Images() {
               />
             </div>
 
-            <CustomImage src={image.image_url} alt="LGTM" width={500} height={500} className="z-0" />
+            <CustomImage src={image.image_url} alt="LGTM" width={500} height={400} className="p-2 z-0" />
           </div>
         ))}
 

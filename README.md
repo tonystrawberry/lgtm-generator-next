@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="https://lgtmarvelous.vercel.app">
+    <img src="/public/logo.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  lgtm.
+</h1>
 
-## Getting Started
+**lgtm** is a LGTM (Looks Good To Me) image collection application. Users can browse images and copy the URL of the image they like to the clipboard with a single click.
 
-First, run the development server:
+We need some **fun** in the world of software development. Let's make the world a more pleasant and friendly place with LGTM images!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📚 Technologies
+```
+NextJS 14
+React 18
+TypeScript 5
+Tailwind CSS 3
+shadcn/ui
+Bun
+Cloudfront CDN with S3 (Origin Access Identity)
+API Gateway + Lambda (Serverless)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🚀 **matomeishi (front-end)** is implemented with **NextJS 14** and deployed with <a href="https://vercel.com/tonystrawberry/lgtm" target="_blank">**Vercel**</a>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Local development
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Set the necessary environment variables in the `.env.local` file.
 
-## Learn More
+```
+NEXT_PUBLIC_SERVER_API_URL=https://9y0yvdvqnc.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/images
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Run the following commands.
+```
+$ bun install
+$ bun dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Access the web application via the following URL.
+```
+http://localhost:3001
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ⚙️ Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The application is deployed to production with <a href="https://vercel.com/tonystrawberry/lgtm" target="_blank">Vercel</a> every time a pull request is merged into the `main` branch.
+Vercel also has preview deployments enabled for pull requests.
