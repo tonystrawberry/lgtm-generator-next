@@ -7,7 +7,7 @@
   lgtm.
 </h1>
 
-**lgtm** is a LGTM (Looks Good To Me) image collection application. Users can browse images and copy the URL of the image they like to the clipboard with a single click.
+**lgtmarvelous.vercel.app** is a LGTM (Looks Good To Me) image collection application. Users can browse images and copy the URL of the image they like to the clipboard with a single click.
 
 We need some **fun** in the world of software development. Let's make the world a more pleasant and friendly place with LGTM images!
 
