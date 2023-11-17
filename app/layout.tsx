@@ -12,8 +12,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'lgtm.',
     description: 'Who needs words when you can have dancing penguins and sassy cats for approving your PRs?',
+    url: 'https://lgtmarvelous.vercel.app/',
+    siteName: 'lgtm.',
+    images: [
+      {
+        url: 'https://d30lzxra6n3hkq.cloudfront.net/og/og-image.png',
+        width: 500,
+        height: 317,
+        alt: 'lgtm.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
-
 };
 
 type RootLayoutProps = {
