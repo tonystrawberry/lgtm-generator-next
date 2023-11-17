@@ -9,7 +9,7 @@ import clsx from "clsx";
 import CustomImage from "@/components/custom-image";
 import { Icons } from "@/components/icons";
 import { Input } from "@/components/ui/input";
-import { useDebounce, useDebouncedCallback } from "use-debounce";
+import { useDebouncedCallback } from "use-debounce";
 
 /**
  * Images is the component that renders the gallery of images.
@@ -32,7 +32,8 @@ export default function Images() {
 
   // Fetch images when the scroll position is greater than 80% of the page height.
   useEffect(() => {
-    if (scrollPosition > 80 && !loading) {
+    console.log(scrollPosition)
+    if (scrollPosition < 100 && !loading) {
       if (hasMore) {
         getImages(nextCursor);
       }
@@ -197,13 +198,12 @@ export default function Images() {
               <CustomImage src={image.image_url} alt="LGTM" width={500} height={400} className="p-2 z-0" />
             </div>
           ))}
-
-        {loading && (
-          <div className="col-span-3 flex justify-center items-center mt-16">
-            <Icons.spinner className="mr-2 h-16 w-16 animate-spin" />
-          </div>
-        )}
       </div>
+      {loading && (
+        <div className="col-span-3 flex justify-center items-center mt-4">
+          <Icons.spinner className="mr-2 h-16 w-16 animate-spin" />
+        </div>
+      )}
     </div>
   );
 }

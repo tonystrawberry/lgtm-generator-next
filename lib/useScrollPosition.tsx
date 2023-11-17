@@ -11,7 +11,7 @@ function useScrollPosition() {
 
     const windowScroll = document.documentElement.scrollTop;
 
-    const scrolled = (windowScroll / height) * 100;
+    const scrolled = height - windowScroll;
 
     setScrollPosition(scrolled);
   }
