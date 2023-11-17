@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: "lgtm.",
   description:
     "Who needs words when you can have dancing penguins and sassy cats for approving your PRs?",
+  openGraph: {
+    title: 'lgtm.',
+    description: 'Who needs words when you can have dancing penguins and sassy cats for approving your PRs?',
+  },
+
 };
 
 type RootLayoutProps = {
