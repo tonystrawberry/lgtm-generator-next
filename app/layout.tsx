@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Who needs words when you can have dancing penguins and sassy cats for approving your PRs?",
   openGraph: {
-    title: 'lgtm.',
+    title: 'LGTM | The Best LGTM GIFs for Your Pull Requests',
     description: 'Who needs words when you can have dancing penguins and sassy cats for approving your PRs?',
     url: 'https://lgtmarvelous.vercel.app/',
     siteName: 'lgtm.',
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={inter.className}>
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );

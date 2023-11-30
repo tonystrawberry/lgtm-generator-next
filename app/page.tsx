@@ -5,7 +5,7 @@ export default async function Home() {
   return (
     <main>
       <Header />
-      <div className="container">
+      <div className="container px-0">
         <Images />
       </div>
     </main>
