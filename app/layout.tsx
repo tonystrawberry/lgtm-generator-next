@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "lgtm.",
+  title: "LGTM | The Best LGTM GIFs for Your Pull Requests",
   description:
     "Who needs words when you can have dancing penguins and sassy cats for approving your PRs?",
   openGraph: {
